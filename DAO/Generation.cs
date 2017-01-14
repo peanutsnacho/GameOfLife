@@ -72,7 +72,8 @@ namespace DAO
         public void ToggleLife(int y, int x)
         {
             Cell cell = (Cell)GetCell(y, x);
-            cell.IsAlive = !cell.IsAlive;
+            if (cell != null)
+                cell.IsAlive = !cell.IsAlive;
         }
 
         public override string ToString()
@@ -82,7 +83,7 @@ namespace DAO
             {
                 for (int x = 0; x < UniverseSize; x++)
                 {
-                    sb.Append(  
+                    sb.Append(
                         string.Format("{0} ", GetCell(y, x).IsAlive ? 1 : 0)
                         );
                 }
