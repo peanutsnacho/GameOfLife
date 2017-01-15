@@ -10,7 +10,7 @@ namespace DAO
         private int _x;
         private int _y;
 
-        public Cell(int col, int row, bool alive)
+        public Cell(int row, int col, bool alive)
         {
             X = col;
             Y = row;

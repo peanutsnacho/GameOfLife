@@ -67,7 +67,7 @@ namespace UI
                 );
 
             if (cell != null)
-                inputBinding.CommandParameter = string.Format("{0},{1}", cell.X, cell.Y);
+                inputBinding.CommandParameter = string.Format("{0},{1}", cell.Y, cell.X);
 
             return inputBinding;
         }
