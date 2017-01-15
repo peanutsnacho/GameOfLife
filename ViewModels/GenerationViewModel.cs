@@ -16,6 +16,7 @@ namespace ViewModels
         public GenerationViewModel(int universeSize)
         {
             ruleEngine = new ConowayRuleEngine(new Generation(universeSize));
+            GenerationNumber = ruleEngine.GenerationNumber;
 
             EvolveCommand = new RelayCommand<object>(_ => Evolve(), _ => CanEvolve());
             ResetCommand = new RelayCommand<object>(_ => ResetGame(), _ => CanResetGame());
@@ -56,7 +57,7 @@ namespace ViewModels
 
         private bool CanToggleLife()
         {
-            return GenerationNumber > 1 || IsFinalState;
+            return GenerationNumber == 1 && !IsFinalState;
         }
 
         public int UniverseSize

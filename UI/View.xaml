@@ -7,17 +7,17 @@
              xmlns:viewmodel="clr-namespace:ViewModels;assembly=ViewModels"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300"
+             Background="AliceBlue"
              Name="GenerationView">
 
     <DockPanel Height="Auto">
         <TextBlock DockPanel.Dock="Top">
             <TextBlock.Text>
-                <Binding Path="UniverseSize" />
-                <!--<MultiBinding StringFormat="Universe Size: {0}x{0} | Generation #: {1} | Evolution Ended?: {2}">
+                <MultiBinding StringFormat="Rozmiar planszy:{0}x{0} | Pokolenie #: {1} | Koniec ewolucji?: {2}">
                     <Binding Path="UniverseSize" />
                     <Binding Path="GenerationNumber" />
-                    <Binding Path="EvolutionEnded" />
-                </MultiBinding>-->
+                    <Binding Path="IsFinalState" />
+                </MultiBinding>
             </TextBlock.Text>
         </TextBlock>
         <Button DockPanel.Dock="Top" Command="{Binding EvolveCommand}" Width="Auto">Ewolucja</Button>

@@ -46,8 +46,6 @@ namespace UI
             cellLabel.DataContext = cell;
             cellLabel.InputBindings.Add(ToggleLiveClickBinding(cell));
             cellLabel.SetBinding(Label.BackgroundProperty, IsAliveBackgroundBinding());
-            cellLabel.Height = 20;
-            cellLabel.Width = 20;
             return cellLabel;
         }
 
@@ -69,7 +67,7 @@ namespace UI
                 );
 
             if (cell != null)
-                inputBinding.CommandParameter = string.Format("{0},{1}", cell.Y, cell.X);
+                inputBinding.CommandParameter = string.Format("{0},{1}", cell.X, cell.Y);
 
             return inputBinding;
         }
