@@ -46,7 +46,6 @@
     <Compile Include="ColourConverters\StandardColourConverter.cs" />
     <Compile Include="EvolutionOutput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ColourConverters\QuadLifeColourConverter.cs" />
     <Compile Include="RelayCommand.cs" />
   </ItemGroup>
   <ItemGroup>
