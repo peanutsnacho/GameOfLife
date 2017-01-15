@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 
 namespace ViewModels
 {
-    class GenerationViewModel : INotifyPropertyChanged
+    public class GenerationViewModel : INotifyPropertyChanged
     {
         private readonly IRuleEngine ruleEngine;
         private int _pupulationSize;
@@ -92,6 +92,11 @@ namespace ViewModels
                 _isFinalState = value;
                 RaisePropertyChanged();
             }
+        }
+
+        public ICell GetCell(int y, int x)
+        {
+            return ruleEngine.GetCell(y, x);
         }
 
         public RelayCommand<object> EvolveCommand { get; private set; }

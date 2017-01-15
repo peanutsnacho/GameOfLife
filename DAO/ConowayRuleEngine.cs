@@ -89,7 +89,7 @@ namespace DAO
         {
             List<Cell> changeLifeCells = new List<Cell>();
             Cell cell;
-            int liveNeighbours;
+            int liveNeighbours = 0;
 
             for (int y = 0; y < Generation.UniverseSize; y++)
             {

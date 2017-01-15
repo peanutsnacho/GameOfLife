@@ -14,6 +14,7 @@ namespace DAO
         {
             UniverseSize = size;
             _universe = new Cell[UniverseSize, UniverseSize];
+            Init();
         }
 
         public int UniverseSize
