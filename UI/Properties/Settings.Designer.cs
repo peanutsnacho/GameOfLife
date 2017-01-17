@@ -25,7 +25,7 @@ namespace UI.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("25")]
+        [global::System.Configuration.DefaultSettingValueAttribute("30")]
         public int BoardSize {
             get {
                 return ((int)(this["BoardSize"]));

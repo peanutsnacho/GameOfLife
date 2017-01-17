@@ -4,6 +4,8 @@ using ViewModels;
 using CORE.ColourConverters;
 using Interfaces;
 using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows;
 
 namespace UI
 {
@@ -43,6 +45,8 @@ namespace UI
         private Label CreateCell(ICell cell)
         {
             Label cellLabel = new Label();
+            cellLabel.BorderBrush = Brushes.Black;
+            cellLabel.BorderThickness = new Thickness(1);
             cellLabel.DataContext = cell;
             cellLabel.InputBindings.Add(ToggleLiveClickBinding(cell));
             cellLabel.SetBinding(Label.BackgroundProperty, IsAliveBackgroundBinding());

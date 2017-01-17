@@ -11,7 +11,7 @@
              Name="GenerationView">
 
     <DockPanel Height="Auto">
-        <TextBlock DockPanel.Dock="Top">
+        <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center">
             <TextBlock.Text>
                 <MultiBinding StringFormat="Rozmiar planszy:{0}x{0} | Pokolenie #: {1} | Koniec ewolucji?: {2}">
                     <Binding Path="UniverseSize" />
@@ -20,9 +20,9 @@
                 </MultiBinding>
             </TextBlock.Text>
         </TextBlock>
-        <Button DockPanel.Dock="Top" Command="{Binding EvolveCommand}" Width="Auto">Ewolucja</Button>
-        <Button DockPanel.Dock="Top" Command="{Binding ResetCommand}" Width="Auto">Resetuj Grę</Button>
-        <Grid DockPanel.Dock="Bottom" Name="Board" ShowGridLines="True" Height="Auto">
+        <Button DockPanel.Dock="Top" Command="{Binding EvolveCommand}" Width="100">Ewolucja</Button>
+        <Button DockPanel.Dock="Top" Command="{Binding ResetCommand}" Width="100">Resetuj Grę</Button>
+        <Grid DockPanel.Dock="Bottom" Name="Board" ShowGridLines="False"  Height="Auto">
         </Grid>
     </DockPanel>
 </UserControl>
